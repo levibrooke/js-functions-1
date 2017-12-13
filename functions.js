@@ -4,12 +4,24 @@
  * @return {string} the number as a string
  */
 
+ function numberToString(num) {
+   num = num.toString();
+   return num;
+ }
+
+ numberToString(13);
+
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
+
+ function increase(n) {
+   n = n + 1;
+   return n;
+ }
 
 
 /**
@@ -18,6 +30,10 @@
  * @return {number}
  */
 
+function decrease(n) {
+  n = n - 1;
+  return n;
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +42,9 @@
  * @return {number} the sum
  */
 
+ function add(x,y) {
+   return x + y;
+ }
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +53,9 @@
  * @return {number} the difference
  */
 
+ function subtract(x,y) {
+   return x - y;
+ }
 
 /**
  * Multiplies two numbers.
@@ -42,6 +64,9 @@
  * @return {number} the product
  */
 
+function multiply(x,y) {
+  return x * y;
+}
 
 /**
  * Divides the first number by the second.
@@ -50,6 +75,9 @@
  * @return {number} the quotient
  */
 
+function divide(x,y) {
+  return x / y;
+}
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +85,9 @@
  * @return {number} squared
  */
 
+function square(x) {
+  return x * x;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +98,28 @@
  * @return {number} the result
  */
 
+function calculate(operation, x, y) {
+
+  var result = 0;
+
+  if (operation == "add") {
+    result = x + y;
+    console.log(x + " + " + y + " = " + result);
+  }
+  else if (operation == "subtract") {
+    result = x - y;
+    console.log(x + " - " + y + " = " + result);
+  }
+  else if (operation == "multiply") {
+    result = x * y;
+    console.log(x + " * " + y + " = " + result);
+  }
+  else if (operation == "divide") {
+    result = x / y;
+    console.log(x + " / " + y + " = " + result);
+  }
+  return result;
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -75,6 +128,9 @@
  * @return {boolean} `a` is larger than `b`
  */
 
+function isGreaterThan(a,b) {
+  return a > b;
+}
 
 /**
  * Returns true if `a` is less than `b`.
@@ -83,6 +139,9 @@
  * @return {boolean} `a` is smaller than `b`
  */
 
+function isLessThan(a,b) {
+  return a < b;
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -91,6 +150,9 @@
  * @return {boolean} the numbers are equal
  */
 
+function areEqual(a,b) {
+  return a === b;
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -98,6 +160,10 @@
  * @param {number} y
  * @return {number} the smallest number
  */
+
+ function minimum(x,y) {
+   return Math.min(x,y);
+ }
 
 
 /**
@@ -107,6 +173,9 @@
  * @return {number} the largest number
  */
 
+ function maximum(x,y) {
+   return Math.max(x,y);
+ }
 
 /**
  * Returns true if `n` is even.
@@ -114,6 +183,9 @@
  * @return {boolean} the number is even
  */
 
+function isEven(n) {
+  return n % 2 == 0;
+}
 
 /**
  * Returns true if `n` is odd.
@@ -121,6 +193,9 @@
  * @return {boolean} the number is odd
  */
 
+function isOdd(n) {
+  return n % 2 !== 0;
+}
 
 /**
  * Returns a letter grade.
@@ -134,6 +209,26 @@
  * @return {string} the score represented as a letter grade
  */
 
+function letterGrade(score, total) {
+
+  var grade = score / total;
+
+  if (grade >= 0.9) {
+    return "A";
+  }
+  else if (grade >= 0.8) {
+    return "B";
+  }
+  else if (grade >= 0.7) {
+    return "C";
+  }
+  else if (grade >= 0.6) {
+    return "D";
+  }
+  else {
+    return "F";
+  }
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -143,6 +238,17 @@
  * @return {object} restaurant
  */
 
+ function incrementReviews(restaurant) {
+
+   if (restaurant.reviews) {
+     restaurant.reviews++;
+   }
+   else {
+     restaurant.reviews = 1;
+   }
+   return restaurant;
+ }
+
 
 /**
  * Joins two strings with a space.
@@ -150,6 +256,10 @@
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
+ function combine(word1, word2) {
+   return word1 + " " + word2;
+ }
 
 
 /**
@@ -160,3 +270,12 @@
  * @return {object} circle
  */
 
+ function createCircle(radius) {
+
+   var circle = {};
+
+   circle.circumference = 2 * Math.PI * radius;
+   circle.area = Math.PI * Math.pow(radius,2);
+
+   return circle;
+ }
